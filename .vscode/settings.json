@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.errorSquiggles": "Disabled",
+
+    "[json]":{
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true,
+    },
+
+}
