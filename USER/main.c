@@ -13,6 +13,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include <rtthread.h>
 #include "stm32f1xx_hal.h"
+#include <console.h>
 
 /* Private constants ---------------------------------------------------------*/
 #define LED1_GPIO_PORT  GPIOD
@@ -61,6 +62,8 @@ static void _led_gpio_init(void)
  *============================================================================*/
 int main(void) 
 {
+    rt_console_init();
+
     _led_gpio_init();
 
     while (1)

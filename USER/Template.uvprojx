@@ -666,9 +666,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>SYSTEM</GroupName>
-        </Group>
-        <Group>
           <GroupName>::RTOS</GroupName>
         </Group>
       </Groups>

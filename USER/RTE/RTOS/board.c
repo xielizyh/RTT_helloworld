@@ -101,7 +101,7 @@ void rt_hw_board_init()
 #endif
 
 #ifdef RT_USING_CONSOLE
-    rt_console_init();
+    //rt_console_init();	/* 注意信号量此时还没有初始化 */
 #endif
 }
 

@@ -16,7 +16,7 @@
 #include <string.h>
 
 /* Private constants ---------------------------------------------------------*/
-//#define CONSOLE_GET_CHAR_INT_MODE   
+#define CONSOLE_GET_CHAR_INT_MODE   /*!< 中断方式获取终端输入字符 */
 
 #define UART_RX_BUF_LEN     16
 #define USART_RX_Pin        GPIO_PIN_9
@@ -194,7 +194,7 @@ static int rt_hw_uart_init(void)
     rt_ringbuffer_init(&uart_rxcb, uart_rx_buf, UART_RX_BUF_LEN);
 #ifdef CONSOLE_GET_CHAR_INT_MODE 
     /* 初始化串口接收数据的信号量 */
-    rt_sem_init(&(shell_rx_sem), "shell_rx", 0, 0);
+    rt_sem_init(&(shell_rx_sem), "shell_rx", 0, 0); /*!< @TODO 使能后程序异常 */
 #endif
     /* 初始化串口参数，如波特率、停止位等等 */
     UartHandle.Instance = USART1;
